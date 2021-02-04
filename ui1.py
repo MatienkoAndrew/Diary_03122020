@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui1.ui'
+# Form implementation generated from reading ui file 'D:\Diary_03122020_git\ui1.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -14,16 +14,31 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(797, 728)
+        MainWindow.resize(994, 804)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setObjectName("horizontalLayout")
+        self.back = QtWidgets.QCommandLinkButton(self.centralwidget)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(14)
+        self.back.setFont(font)
+        self.back.setMouseTracking(True)
+        self.back.setTabletTracking(False)
+        self.back.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.back.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
+        self.back.setLayoutDirection(QtCore.Qt.LeftToRight)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("D:\\Diary_03122020_git\\back.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.back.setIcon(icon)
+        self.back.setObjectName("back")
+        self.horizontalLayout.addWidget(self.back)
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, -3115, 752, 4081))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 770, 4090))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.gridLayout = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout.setObjectName("gridLayout")
@@ -38,7 +53,7 @@ class Ui_MainWindow(object):
 "color: white")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.label, 1, 0, 1, 1)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.frame = QtWidgets.QFrame(self.scrollAreaWidgetContents)
@@ -83,6 +98,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_4.setFont(font)
+        self.label_4.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_4.setAutoFillBackground(False)
         self.label_4.setStyleSheet("color: white;\n"
 "background-color: #22222e;\n"
 "border: 2px solid #f66867;\n"
@@ -535,12 +552,15 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_3.addWidget(self.pushButton)
         self.verticalLayout_2.addWidget(self.frame)
-        self.gridLayout.addLayout(self.verticalLayout_2, 2, 0, 1, 1)
+        self.gridLayout.addLayout(self.verticalLayout_2, 3, 0, 1, 1)
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.gridLayout.addLayout(self.gridLayout_2, 0, 0, 1, 1)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.horizontalLayout.addWidget(self.scrollArea)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 797, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 994, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -553,6 +573,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.back.setText(_translate("MainWindow", "Назад"))
         self.label.setText(_translate("MainWindow", "Дневник"))
         self.label_2.setText(_translate("MainWindow", "Зарядка сделана?"))
         self.label_4.setText(_translate("MainWindow", "Кровать сразу заправлена?"))

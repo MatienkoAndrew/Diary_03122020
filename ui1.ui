@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>797</width>
-    <height>728</height>
+    <width>994</width>
+    <height>804</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,38 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QCommandLinkButton" name="back">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>Назад</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>back.png</normaloff>back.png</iconset>
+      </property>
+     </widget>
+    </item>
     <item>
      <widget class="QScrollArea" name="scrollArea">
       <property name="widgetResizable">
@@ -24,13 +56,13 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-3115</y>
-         <width>752</width>
-         <height>4081</height>
+         <y>0</y>
+         <width>770</width>
+         <height>4090</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0">
+        <item row="1" column="0">
          <widget class="QLabel" name="label">
           <property name="minimumSize">
            <size>
@@ -57,7 +89,7 @@ color: white</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="3" column="0">
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QFrame" name="frame">
@@ -133,6 +165,12 @@ border-radius: 20;</string>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
                </property>
                <property name="styleSheet">
                 <string notr="true">color: white;
@@ -850,6 +888,9 @@ QPushButton: pressed {
           </item>
          </layout>
         </item>
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_2"/>
+        </item>
        </layout>
       </widget>
      </widget>
@@ -861,7 +902,7 @@ QPushButton: pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>797</width>
+     <width>994</width>
      <height>26</height>
     </rect>
    </property>
